@@ -1,5 +1,5 @@
-ARG PYTHON_BASE_IMAGE=quay.io/ansible/python-base:latest
-ARG PYTHON_BUILDER_IMAGE=quay.io/ansible/python-builder:latest
+ARG PYTHON_BASE_IMAGE=daveshow/python-base-image:main
+ARG PYTHON_BUILDER_IMAGE=daveshow/python-builder:main
 ARG ANSIBLE_BRANCH=""
 ARG ZUUL_SIBLINGS=""
 
