@@ -1,5 +1,5 @@
 ARG PYTHON_BASE_IMAGE=daveshow/python-base-image:main
-ARG PYTHON_BUILDER_IMAGE=daveshow/python-builder:main
+ARG PYTHON_BUILDER_IMAGE=daveshow/python-builder-image:main
 ARG ANSIBLE_BRANCH=""
 ARG ZUUL_SIBLINGS=""
 
