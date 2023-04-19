@@ -27,9 +27,7 @@ jobs:
       - name: Check for outdated packages
         id: vars
         run: |
-          TMPDIR=$(mktemp -d) || true
-
-          echo "TMPDIR={TMPDIR}" >> $GITHUB_OUTPUT
+          echo TMPDIR=$(mktemp -d) >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -78,8 +76,7 @@ jobs:
         id: builds
         run: |
           pushd $TMPDIR
-          WHEELS=$(ls -1 ansible_runner*.whl) || true
-          echo "WHEELS={WHEELS}" >> $GITHUB_OUTPUT
+          echo WHEELS=$(ls -1 ansible_runner*.whl) >> $GITHUB_OUTPUT
         env:
           TMPDIR: ${{ steps.vars.outputs.TMPDIR }}
 
