@@ -90,4 +90,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          build-args: WHEELS=${{ steps.builds.outputs.WHEELS }}
+          build-args: WHEEL=${{ steps.builds.outputs.WHEELS }}
