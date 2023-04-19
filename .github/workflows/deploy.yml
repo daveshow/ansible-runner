@@ -75,7 +75,7 @@ jobs:
           TMPDIR: ${{ steps.vars.outputs.TMPDIR }}
 
       - name: Prepare runner test container
-        id: vars
+        id: builds
         run: |
           pushd $TMPDIR
           WHEELS=$(ls -1 ansible_runner*.whl) || true
@@ -93,4 +93,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          build-args: WHEELS=${{ steps.vars.outputs.WHEELS }}
+          build-args: WHEELS=${{ steps.builds.outputs.WHEELS }}
